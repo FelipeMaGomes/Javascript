@@ -1,0 +1,11 @@
+                                                                                                                                                |
+   WINDOWS.ALERT                                                                                                                                |
+                                                                                                                                                |
+    alert('Minha primeira mensagem!')                  [aviso da palavra escrita entre as aspas]                                                |
+------------------------------------------------------------------------------------------------------------------------------------------------|
+    a = window.confirm('Está gostando de JS?')                                                                                                  |
+    alert(a)                                           [faz uma pergunta e mostra a questão selecionada pelo leitor]                            |
+------------------------------------------------------------------------------------------------------------------------------------------------|   
+    nome = window.prompt('Qual é seu nome?')                                                                                                    |
+    alert(nome)                                        [faz uma pergunta e voce tem que escrever algo que esteja sendo pedido]                  |
+________________________________________________________________________________________________________________________________________________|
