@@ -9,3 +9,13 @@
     nome = window.prompt('Qual é seu nome?')                                                                                                    |
     alert(nome)                                        [faz uma pergunta e voce tem que escrever algo que esteja sendo pedido]                  |
 ________________________________________________________________________________________________________________________________________________|
+
+    COMANDOS DA VAR/LET/COSNT
+
+        // Number.parseInt / 3 / 5 / 6 / 9 / 1 / 4
+        // Number.parseFloat / 4,3 / 5,3 / 34,9
+        //window.alert('A soma dos valores é ' + s.toString())// ou String(s)
+        // `Eu estoud apredendo ${s}` / usa template string / para node / terminal
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)//s.length / quantos caracteres a string tem
+        //s.toUpperCase() / tudo para 'MAIÚSCULAS'
+        //s.toLowerCase() / tudo para 'minúsculas'
