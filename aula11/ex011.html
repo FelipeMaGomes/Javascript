@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro</title>
+</head>
+<body>
+    <h1>Pais residente</h1>
+    Digite o país que voce mora:<input type="text" id="pais">
+    <input type="button" value="Confirmar" onclick="nac()">
+    <div id="res">
+
+    </div>
+    <script>
+        function nac() {
+            var pa = window.document.querySelector('input#pais').value
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Como voce nasceu em <strong>${pa}</strong></p>`
+            switch (pa) {
+                case ('Brasil'): 
+                    var naci = 'brasileiro';
+                    break;
+
+                case ('França'):
+                    var naci = 'françes';
+                    break;
+
+                case ('Argentina'):
+                    var naci = 'argentino';
+                    break;
+                
+                case ('Alemanha'):
+                    var naci = 'alemão';
+                    break;
+
+                default:
+                    var naci = 'Estrangeiro';
+
+            }
+            res.innerHTML += `<p>Voce é <strong>${naci}</strong></p>`
+        }
+    </script>
+</body>
+</html>
