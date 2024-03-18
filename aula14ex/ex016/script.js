@@ -6,24 +6,30 @@ function contar() {
     var contagem = document.getElementById("contagem")
     var contador = 0
     var s = ""
-    var r = document.getElementById("res")
-    if (p = 0) {
+    if (p == 0) {
         p = 1
+        alert('PASSO invalido!, será considerado igual a 1')
     }
-    if (i >= f) {
+    var r = document.getElementById("res")
+    if (document.getElementById("ini").value.length == 0  || document.getElementById("fim").value.length == 0) {
+        r.innerHTML = 'Impossível contar!'
+    } else if (i >= f) {
         for (var c = i; c >= f; c -= p) {
-            s = s + c + " _ "    
+            s = s + c + `\u{1F449}`    
             contador += 1  
         }
+        r.innerHTML = `Resultado: ` 
+        contagem.innerHTML = `${s} \u{1F3C1}`
+        final.innerHTML = `quantidade de numeros: ${contador}!`
     } else if (i <= f){
         for (var c = i; c <= f; c += p) {
-            s = s + c + " _ "    
+            s = s + c + `\u{1F449}`    
             contador += 1  
         }
-    }
-    r.innerHTML = `Resultado: ` 
-    contagem.innerHTML = s
-    final.innerHTML = `quantidade de numeros: ${contador}!` 
+        r.innerHTML = `Resultado: ` 
+        contagem.innerHTML = `${s} \u{1F3C1}`
+        final.innerHTML = `quantidade de numeros: ${contador}!`
+    } 	
 }
 
 
