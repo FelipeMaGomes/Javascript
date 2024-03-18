@@ -4,6 +4,10 @@ function contar() {
     var p = document.getElementById("passo").value
     var r = document.getElementById("res") 
     r.innerHTML = 'Contando: ';
+    for (var c = i; c <= f; c = c + p) {
+        
+    }
+    console.log('FIM!')
 }
 
 
