@@ -31,20 +31,3 @@ function contar() {
         final.innerHTML = `quantidade de numeros: ${contador}!`
     } 	
 }
-
-
-
-
-
-
-/* function contar() {
-    var i = getElementById('ini')
-    var f = getElementById('fim')
-    var p = getElementById('passo')
-   //var conta = getElementById('conta')
-    var r = getElementById('res') 
-    r.innerHTML = 'Contando: '
-    for (var c = i; c <= f; c += p) {
-        console.log(`${c} `)
-    }
-} */
