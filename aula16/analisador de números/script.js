@@ -1,11 +1,12 @@
+var v = Number(document.getElementById("valor").value)
+var sel = document.getElementById("lista")
+var o = document.createElement('option')
+
 function adicionar() {
-    var v = Number(document.getElementById("valor").value)
-    var o = document.getElementById("opcao")
-    var list = []
-    list.push(v)
-    o.innerHTML += `\n Valor ${v} adicionado.`
+    o.text = `Valor ${v} adicionado.`
+    sel.appendChild(o)
 }
 
-function finalizar() {
-
+function finalizar(){
+    alert()
 }

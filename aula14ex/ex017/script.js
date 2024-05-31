@@ -11,7 +11,7 @@ function tabuada() {
             item.text = `${num} x ${c} = ${num*c}`
             item.value = `tab${c}`
             seltab.appendChild(item)
-           // r = num * c
+           // r = num * c 
            // seltab.innerHTML += `<option value="">${num} x ${c} = ${r}</option>`
         }
     }
