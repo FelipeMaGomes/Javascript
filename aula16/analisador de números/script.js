@@ -14,16 +14,20 @@ function verifica_existe(n) {
 }
 
 function adicionar() {
+    var p = document.getElementById("res")
+    p.innerHTML = ''
     var v = Number(document.getElementById("valor").value)
     var sel = document.getElementById("lista")
     var o = document.createElement('option')
-    if (v < 1 || v > 100 || verifica_existe(v)) {
+    if (v < 1 || v > 100 || verifica_existe(v)) { 
         alert('Valor inválido ou já encontrado na lista')
     } else {
         list.push(v)
         o.text = `Valor ${v} adicionado.`
         sel.appendChild(o)
     }
+    document.getElementById("valor").value = ''
+    document.getElementById("valor").focus()
 }
 
 function calculo() {
@@ -37,19 +41,22 @@ function calculo() {
             maior = list[c]
         } 
         soma += list[c]
-        alert(soma)
     }
     media = soma / list.length
     return [maior, menor, soma, media]
 }
 
 function finalizar(){
-    var p = document.getElementById("res")
-    var r = calculo()
-    alert(r)
-    p.innerHTML += `<p> Ao todo, temos ${list.length} números cadastrados. <p>`
-    p.innerHTML += `<p> O maior valor informado foi ${r[0]} <p>`
-    p.innerHTML += `<p> O menor valor informado foi ${r[1]} <p>`
-    p.innerHTML += `<p> Somando todos os valores, temos ${r[2]} <p>`
-    p.innerHTML += `<p> A média dos valores digitados é ${r[3]} <p>`
+    if (list.length == 0) {
+        alert('Adicione um item na lista antes de finalizar')
+    } else {
+        var p = document.getElementById("res")
+        var r = calculo()
+        p.innerHTML = ''
+        p.innerHTML += `<p> Ao todo, temos ${list.length} números cadastrados. <p>`
+        p.innerHTML += `<p> O maior valor informado foi ${r[0]} <p>`
+        p.innerHTML += `<p> O menor valor informado foi ${r[1]} <p>`
+        p.innerHTML += `<p> Somando todos os valores, temos ${r[2]} <p>`
+        p.innerHTML += `<p> A média dos valores digitados é ${r[3]} <p>`
+    }
 }
